@@ -572,7 +572,7 @@ h2 {
   font-size: 22px;
 }
 /* events end  */
-.event__text__part {
+.small_event .event__text__part {
   display: flex;
   height: 160px;
   flex-wrap: wrap;
