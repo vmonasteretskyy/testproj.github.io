@@ -47,105 +47,207 @@
           <img src="./img/login.svg" alt="" />
           <span>Войти</span>
         </div>
-        <div class="header__cart just_center">
-          <img src="./img/paper-bag-with-handle.svg" alt="" />
-          <span>
-            6
-          </span>
+        <div class="wrap_cart">
+          <div class="header__cart just_center">
+            <img class="shake_this" src="./img/paper-bag-with-handle.svg" alt="" />
+            <span>
+              6
+            </span>
+          </div>
+          <div class="menu__icon">
+            <img src="./img/menu.svg" alt="" />
+          </div>
         </div>
       </div>
     </div>
-    <div class="header_filter">
-      <div class="container just_btwn">
-        <div class="header__selects just_btwn">
-          <div class="header__dropdown">
-            <img src="./img/place.svg" alt="" />
-            <select name="city" id="city">
-              <option value="">Город</option>
-              <option value="">Город1</option>
-              <option value="">Город2</option>
-              <option value="">Город3</option>
-              <option value="">Город4</option>
-            </select>
+    <div class="mobile__menu">
+      <div class="close__btn">
+        <img src="./img/close-button.svg" alt="" />
+      </div>
+      <div class="header_filter ">
+        <div class="container just_btwn">
+          <div class="header__selects just_btwn">
+            <div class="header__dropdown">
+              <img src="./img/place.svg" alt="" />
+              <select name="city" id="city">
+                <option value="">Город</option>
+                <option value="">Город1</option>
+                <option value="">Город2</option>
+                <option value="">Город3</option>
+                <option value="">Город4</option>
+              </select>
+            </div>
+            <div class="header__dropdown">
+              <img src="./img/calendar.svg" alt="" />
+              <select name="date" id="date">
+                <option value="">Дата</option>
+                <option value="">02.02.19</option>
+                <option value="">03.03.19</option>
+                <option value="">04.02.19</option>
+                <option value="">04.04.19</option>
+              </select>
+            </div>
           </div>
-          <div class="header__dropdown">
-            <img src="./img/calendar.svg" alt="" />
-            <select name="date" id="date">
-              <option value="">Дата</option>
-              <option value="">02.02.19</option>
-              <option value="">03.03.19</option>
-              <option value="">04.02.19</option>
-              <option value="">04.04.19</option>
-            </select>
+          <div class="header__check just_btwn">
+            <div>
+              <input type="checkbox" id="checkbox1" name="checkbox1" />
+              <label for="checkbox1">Концерты</label>
+            </div>
+            <div>
+              <input type="checkbox" id="checkbox2" name="checkbox2" />
+              <label for="checkbox2">Театры</label>
+            </div>
+            <div>
+              <input type="checkbox" id="checkbox3" name="checkbox3" />
+              <label for="checkbox3">Юмор</label>
+            </div>
+            <div>
+              <input type="checkbox" id="checkbox4" name="checkbox4" />
+              <label for="checkbox4">Шоу</label>
+            </div>
+            <div>
+              <input type="checkbox" id="checkbox5" name="checkbox5" />
+              <label for="checkbox5">Детям</label>
+            </div>
+            <div>
+              <input type="checkbox" id="checkbox6" name="checkbox6" />
+              <label for="checkbox6">Клубы</label>
+            </div>
+            <div>
+              <input type="checkbox" id="checkbox7" name="checkbox7" />
+              <label for="checkbox7">Фестивали</label>
+            </div>
+            <div class="more mobile__more">
+              <img src="./img/more.svg" alt="" />
+            </div>
+          </div>
+          <div class="more">
+            <img src="./img/more.svg" alt="" />
           </div>
         </div>
-        <div class="header__check just_btwn">
-          <div>
-            <input type="checkbox" id="checkbox1" name="checkbox1" />
-            <label for="checkbox1">Концерты</label>
+      </div>
+      <div class="head__mobile">
+        <div class="container  just_btwn">
+          <div class="header__lang">
+            <span>Рус</span>
+            <ul>
+              <li>Укр</li>
+              <li>Eng</li>
+            </ul>
           </div>
-          <div>
-            <input type="checkbox" id="checkbox2" name="checkbox2" />
-            <label for="checkbox2">Театры</label>
+          <div class="header__login">
+            <img src="./img/login.svg" alt="" />
+            <span>Войти</span>
           </div>
-          <div>
-            <input type="checkbox" id="checkbox3" name="checkbox3" />
-            <label for="checkbox3">Юмор</label>
+          <div class="search_block">
+            <img src="./img/search.svg" alt="" />
+            <form action="" autocomplete="on">
+              <input id="search" name="search" type="text" placeholder="What're we looking for ?" />
+              <button id="search_submit" type="submit">
+                <img src="./img/search.svg" alt="" />
+              </button>
+            </form>
           </div>
-          <div>
-            <input type="checkbox" id="checkbox4" name="checkbox4" />
-            <label for="checkbox4">Шоу</label>
-          </div>
-          <div>
-            <input type="checkbox" id="checkbox5" name="checkbox5" />
-            <label for="checkbox5">Детям</label>
-          </div>
-          <div>
-            <input type="checkbox" id="checkbox6" name="checkbox6" />
-            <label for="checkbox6">Клубы</label>
-          </div>
-          <div>
-            <input type="checkbox" id="checkbox7" name="checkbox7" />
-            <label for="checkbox7">Фестивали</label>
-          </div>
-        </div>
-        <div class="more">
-          <img src="./img/more.svg" alt="" />
         </div>
       </div>
     </div>
   </header>
   <main>
-    <section class="big__banner">
-      <div class="container">
-        <div class="big__banner__content">
-          <h1>Группа Ленинград в Германии. Финальный тур</h1>
-          <div class="big__banner__date date__block">
-            <span>
-              19
-            </span>
-            <div>
-              <p>августа</p>
-              <p>2019</p>
+
+    <section class="big__slider">
+        <div class="big__banner">
+            <div class="container">
+              <div class="big__banner__content">
+                <h1>Группа Ленинград в Германии. Финальный тур</h1>
+                <div class="big__banner__date date__block">
+                  <span>
+                    19
+                  </span>
+                  <div>
+                    <p>августа</p>
+                    <p>2019</p>
+                  </div>
+                </div>
+                <div>
+                  <a class="red_btn" href="">
+                    <img src="./img/tickets.svg" alt="" />
+                    <span>
+                      Купить билет
+                    </span>
+                  </a>
+                  <div class="banner__location">
+                    
+                      <img src="./img/place2.svg" alt="" />
+                      <div>Berlin, IFA Sommergarten Messe Berlin, 14055</div>
+                
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div>
-            <a class="red_btn" href="">
-              <img src="./img/tickets.svg" alt="" />
-              <span>
-                Купить билет
-              </span>
-            </a>
-            <div class="banner__location">
-              <a href="">
-                <img src="./img/place2.svg" alt="" />
-                <div>Berlin, IFA Sommergarten Messe Berlin, 14055</div>
-              </a>
+          <div class="big__banner">
+              <div class="container">
+                <div class="big__banner__content">
+                  <h1>Группа Ленинград в Германии. Финальный тур</h1>
+                  <div class="big__banner__date date__block">
+                    <span>
+                      19
+                    </span>
+                    <div>
+                      <p>августа</p>
+                      <p>2019</p>
+                    </div>
+                  </div>
+                  <div>
+                    <a class="red_btn" href="">
+                      <img src="./img/tickets.svg" alt="" />
+                      <span>
+                        Купить билет
+                      </span>
+                    </a>
+                    <div class="banner__location">
+                      <a href="">
+                        <img src="./img/place2.svg" alt="" />
+                        <div>Berlin, IFA Sommergarten Messe Berlin, 14055</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
+            <div class="big__banner">
+                <div class="container">
+                  <div class="big__banner__content">
+                    <h1>Группа Ленинград в Германии. Финальный тур</h1>
+                    <div class="big__banner__date date__block">
+                      <span>
+                        19
+                      </span>
+                      <div>
+                        <p>августа</p>
+                        <p>2019</p>
+                      </div>
+                    </div>
+                    <div>
+                      <a class="red_btn" href="">
+                        <img src="./img/tickets.svg" alt="" />
+                        <span>
+                          Купить билет
+                        </span>
+                      </a>
+                      <div class="banner__location">
+                        <a href="">
+                          <img src="./img/place2.svg" alt="" />
+                          <div>Berlin, IFA Sommergarten Messe Berlin, 14055</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
     </section>
+   
     <section class="top__slider__sec">
       <div class="container ">
         <div class="top__slider just_btwn">
@@ -264,10 +366,12 @@
           Все мероприятия
         </h2>
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-6 big__event__col">
             <div class="big__event event">
               <div class="event__img__part">
+                <a href="">
                 <img src="./img/invalid-name.png" alt="" />
+              </a>
               </div>
               <div class="event__text__part">
                 <p>
@@ -287,9 +391,14 @@
                   <img src="./img/wallet.svg" alt="" />
                   <span>35-75€</span>
                 </div>
-                <div class="event__location event__details">
+                <div class="event__location more__location event__details">
                   <img src="./img/place2.svg" alt="" />
                   <span>8 городов</span>
+                  <ul class="list__places">
+                    <li>asdasdasd</li>
+                    <li>adssadasd</li>
+                    <li>asdasds</li>
+                  </ul>
                 </div>
 
                 <a class="red_btn" href="">
@@ -301,13 +410,15 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-3  col-sm-6">
             <div class="small_event event">
               <div class="event__img__part">
+                <a href="">
                 <img src="./img/ban1.png" alt="" />
                 <a class="red_btn" href="">
                   <img src="./img/tickets.svg" alt="" />
                 </a>
+              </a>
               </div>
               <div class="event__text__part">
                 <p>
@@ -328,21 +439,28 @@
                     <img src="./img/wallet.svg" alt="" />
                     <span>35-75€</span>
                   </div>
-                  <div class="event__location event__details">
+                  <div class="event__location more__location event__details">
                     <img src="./img/place2.svg" alt="" />
                     <span>8 городов</span>
+                    <ul class="list__places">
+                        <li>asdasdasd</li>
+                        <li>adssadasd</li>
+                        <li>asdasds</li>
+                      </ul>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-3 col-sm-6">
             <div class="small_event event">
               <div class="event__img__part">
+                <a href="">
                 <img src="./img/ban2.png" alt="" />
                 <a class="red_btn" href="">
                   <img src="./img/tickets.svg" alt="" />
                 </a>
+              </a>
               </div>
               <div class="event__text__part">
                 <p>
@@ -374,6 +492,13 @@
       </div>
     </section>
   </main>
+  <div class="bg__modal">
+      <div class="modal__one">
+        <p>Вы были успешно подписаны на нашу рассылку</p>
+        <a href="" class="close_modal red_btn">OK</a>
+      </div>
+  </div>
+  </div>
   <body>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.mask.js"></script>
