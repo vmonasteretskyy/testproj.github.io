@@ -83,3 +83,7 @@ $(".big__slider").slick({
   arrows: false,
   infinite: false
 });
+
+$(".all_text").click(function() {
+  $(".about_us__home__text").toggleClass("more_text");
+});
