@@ -21,9 +21,15 @@ $(".top__slider").slick({
   asNavFor: ".big__slider",
   responsive: [
     {
-      breakpoint: 991.9,
+      breakpoint: 1199.9,
       settings: {
         slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 991.9,
+      settings: {
+        slidesToShow: 2
       }
     },
     {
@@ -35,33 +41,19 @@ $(".top__slider").slick({
     {
       breakpoint: 575.9,
       settings: {
-        slidesToShow: 1
+        slidesToShow: 3
       }
     }
   ]
 });
 
-$(".search_block").click(function() {
-  $(".search_block form").addClass("active_search");
-});
-
-$(document).click(function() {
-  $(".search_block form").removeClass("active_search");
-});
-
-$(".search_block").click(function(e) {
-  e.stopPropagation(); // This is the preferred method.
-  return true; // This should not be used unless you do not want
-  // any click events registering inside the div
-});
-
-$(".menu__icon").click(function() {
-  $(".mobile__menu").css("top", "0");
-});
-$(".close__btn").click(function() {
-  $(".mobile__menu").css("top", "-100vh");
-});
-$(".red_btn:not(.close_modal)").click(function(e) {
+// $(".menu__icon").click(function() {
+//   $(".mobile__menu").css("top", "0");
+// });
+// $(".close__btn").click(function() {
+//   $(".mobile__menu").css("top", "-100vh");
+// });
+$(" .big__banner  .red_btn:not(.close_modal)").click(function(e) {
   e.preventDefault();
   // $(".bg__modal").css("display", "flex");
   $(".bg__modal")
@@ -87,3 +79,77 @@ $(".big__slider").slick({
 $(".all_text").click(function() {
   $(".about_us__home__text").toggleClass("more_text");
 });
+
+$(".more__content").click(function() {
+  $(".more__events")
+    .slideToggle(500)
+    .hide()
+    .css("display", "flex");
+  $(this).toggleClass("less__text");
+});
+
+$(document).ready(function() {
+  $(".header__dropdown select").select2();
+});
+
+$(".more >div:first-child").click(function() {
+  $(".more__checks").slideToggle(400);
+});
+
+function checkBg() {
+  if (
+    $(".header_filter").hasClass("red") ||
+    $(".header__search svg").hasClass("red_icon") ||
+    $(".menu__mobile__icon").hasClass("red_icon")
+  ) {
+    $(".black__field").addClass("bg_viz");
+  } else {
+    $(".black__field").removeClass("bg_viz");
+  }
+}
+
+$(".mobile__filter__btn").click(function() {
+  $(".mob_filter")
+    .slideToggle(500)
+    .hide()
+    .css("display", "flex");
+  $(".header_filter").toggleClass("red");
+  checkBg();
+});
+
+$(".header__search svg").click(function() {
+  $(".header__search form")
+    .slideToggle(500)
+    .hide()
+    .css("display", "flex");
+  $(this).toggleClass("red_icon");
+  checkBg();
+});
+
+$(".menu__mobile__icon ").click(function() {
+  $(".mobile__menu")
+    .slideToggle(500)
+    .hide()
+    .css("display", "flex");
+  $(this).toggleClass("red_icon");
+  checkBg();
+});
+
+$(".mobile__lang span").click(function() {
+  $(".mobile__menu ul ").slideToggle(500);
+  $(this).toggleClass("red");
+  checkBg();
+});
+
+if ($(window).width() < 576) {
+  $("footer").click(function(e) {
+    console.log();
+    if ($(e.target).hasClass("footer__title")) {
+      $(e.target)
+        .next("div.footer__lists")
+        .slideToggle(500)
+        .hide()
+        .css("display", "flex");
+    }
+  });
+}

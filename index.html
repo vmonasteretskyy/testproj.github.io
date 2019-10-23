@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <link rel="stylesheet" type="text/css" href="style/slick.css" />
-
+    <link rel="stylesheet" type="text/css" href="style/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="style/datepicker.min.css" />
     <link rel="stylesheet" type="text/css" href="style/main.css" />
     <title>Home</title>
   </head>
+  <body>
+    <div class="black__field"></div>
   <section class="banner__top">
     <div class="container">
       <div class="banner__date">
@@ -23,6 +26,13 @@
   <header>
     <div class="header__top">
       <div class="container">
+        <div class="menu__mobile__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+              <g fill="#141B23" fill-rule="evenodd">
+                  <path d="M0 14h18v3H0zM0 7h14v3H0zM0 0h18v3H0z"/>
+              </g>
+          </svg>
+        </div>
         <div class="header__logo">
           <a href="">
             <img src="./img/logo_top.png" alt="" />
@@ -37,13 +47,22 @@
         </div>
         <div class="header__search">
           <img src="./img/arrow.svg" alt="" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21">
+            <path fill="#000" fill-rule="nonzero" d="M19.663 18.501l-4.834-5.028a8.175 8.175 0 0 0 1.924-5.272C16.753 3.68 13.074 0 8.552 0S.351 3.68.351 8.201c0 4.522 3.679 8.201 8.201 8.201a8.113 8.113 0 0 0 4.699-1.484l4.87 5.066c.204.212.478.328.772.328a1.071 1.071 0 0 0 .77-1.811zM8.552 2.14a6.069 6.069 0 0 1 6.062 6.062 6.069 6.069 0 0 1-6.062 6.062A6.069 6.069 0 0 1 2.49 8.2 6.069 6.069 0 0 1 8.552 2.14z"/>
+           </svg>
           <form action="">
             <input type="text" placeholder="Поиск мероприятий" />
             <button type="submit"></button>
           </form>
         </div>
         <div class="header__login">
-          <img src="./img/login.svg" alt="" />
+            <svg  xmlns="http://www.w3.org/2000/svg" width="19" height="16" viewBox="0 0 19 16">
+              <g fill="#000" fill-rule="nonzero">
+                  <path d="M9.68 9.68a.857.857 0 0 0 1.212 1.212l2.571-2.571a.863.863 0 0 0 .057-.063l.022-.03c.01-.012.02-.025.028-.038l.022-.036.021-.036c.007-.012.012-.025.018-.038.006-.013.013-.025.018-.038l.014-.038.014-.04.01-.04c.004-.013.008-.028.01-.042.004-.015.005-.03.007-.045.002-.013.005-.025.006-.038a.844.844 0 0 0 .004-.083v-.002a.846.846 0 0 0-.004-.084l-.005-.038-.007-.045-.01-.043-.01-.038-.015-.041-.014-.039-.017-.037c-.006-.013-.012-.026-.02-.039-.005-.011-.013-.023-.02-.034l-.022-.038-.027-.036-.023-.03a.866.866 0 0 0-.054-.06l-.003-.004-2.571-2.571A.857.857 0 0 0 9.68 5.749l1.108 1.108H.858a.857.857 0 0 0 0 1.715h9.93L9.68 9.68z"/>
+                  <path d="M17.429 0H6.57a.857.857 0 0 0-.857.857v3.429a.857.857 0 0 0 1.715 0V1.714h9.142v12H7.43v-2.571a.857.857 0 0 0-1.715 0v3.428c0 .474.384.858.857.858H17.43a.857.857 0 0 0 .857-.858V.857A.857.857 0 0 0 17.429 0z"/>
+              </g>
+          </svg>
+          
           <span>Войти</span>
         </div>
         <div class="wrap_cart">
@@ -52,19 +71,54 @@
             <span>
               6
             </span>
+            <img  class="shake_this" src="./img/mob_cart.svg" alt="">
           </div>
-          <div class="menu__icon">
+          <!-- <div class="menu__icon">
             <img src="./img/menu.svg" alt="" />
+          </div> -->
+        </div>
+        <div class="mobile__menu ">
+          <div class="mobile__lang">
+            <p>Выбор языка:</p>
+            <span>Русский
+                <svg height="5" viewBox="0 0 8 5" width="8" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m7.918.492-.4-.401a.253.253 0 0 0 -.37 0l-3.148 3.149-3.151-3.15a.253.253 0 0 0 -.368 0l-.4.4a.253.253 0 0 0 0 .37l3.734 3.734a.253.253 0 0 0 .368 0l3.735-3.734a.253.253 0 0 0 0-.368z" fill="#7c7c7c"/>
+                </svg>
+            </span>
+            
+            <ul>
+              <li>Укр</li>
+              <li>Eng</li>
+            </ul>
+          </div>
+          <div class="header__login"> 
+             <svg  xmlns="http://www.w3.org/2000/svg" width="19" height="16" viewBox="0 0 19 16">
+            <g fill="#000" fill-rule="nonzero">
+                <path d="M9.68 9.68a.857.857 0 0 0 1.212 1.212l2.571-2.571a.863.863 0 0 0 .057-.063l.022-.03c.01-.012.02-.025.028-.038l.022-.036.021-.036c.007-.012.012-.025.018-.038.006-.013.013-.025.018-.038l.014-.038.014-.04.01-.04c.004-.013.008-.028.01-.042.004-.015.005-.03.007-.045.002-.013.005-.025.006-.038a.844.844 0 0 0 .004-.083v-.002a.846.846 0 0 0-.004-.084l-.005-.038-.007-.045-.01-.043-.01-.038-.015-.041-.014-.039-.017-.037c-.006-.013-.012-.026-.02-.039-.005-.011-.013-.023-.02-.034l-.022-.038-.027-.036-.023-.03a.866.866 0 0 0-.054-.06l-.003-.004-2.571-2.571A.857.857 0 0 0 9.68 5.749l1.108 1.108H.858a.857.857 0 0 0 0 1.715h9.93L9.68 9.68z"/>
+                <path d="M17.429 0H6.57a.857.857 0 0 0-.857.857v3.429a.857.857 0 0 0 1.715 0V1.714h9.142v12H7.43v-2.571a.857.857 0 0 0-1.715 0v3.428c0 .474.384.858.857.858H17.43a.857.857 0 0 0 .857-.858V.857A.857.857 0 0 0 17.429 0z"/>
+            </g>
+        </svg> 
+            <span>Войти</span>
           </div>
         </div>
       </div>
+
     </div>
-    <div class="mobile__menu">
-      <div class="close__btn">
-        <img src="./img/close-button.svg" alt="" />
-      </div>
       <div class="header_filter ">
-        <div class="container just_btwn">
+        <div class="container">
+            <div class="mobile__filter__btn">  
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                  <path fill="#5B5B5B" fill-rule="evenodd" d="M13.6 0a.8.8 0 0 1 .8.8v10.537a2.401 2.401 0 1 1-1.6 0V.8a.8.8 0 0 1 .8-.8zM8 0a.8.8 0 0 1 .8.8v4.8c0 .045-.004.09-.011.133a2.4 2.4 0 0 1-.002 4.535.643.643 0 0 1 .013.132v4.8a.8.8 0 1 1-1.6 0v-4.8c0-.045.004-.09.011-.133a2.4 2.4 0 0 1 .002-4.535A.643.643 0 0 1 7.2 5.6V.8A.8.8 0 0 1 8 0zM2.4 0a2.4 2.4 0 0 1 .8 4.663V15.2a.8.8 0 1 1-1.6 0V4.664A2.401 2.401 0 0 1 2.4 0zm11.2 12.8a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6zM8 7.2a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6zM2.4 1.6a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6z"/>
+              </svg>
+              <span>
+                  Фильтр событий
+              </span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5">
+                <path fill="#7C7C7C" fill-rule="nonzero" d="M7.918.492l-.4-.401a.253.253 0 0 0-.37 0L4 3.24.849.09a.253.253 0 0 0-.368 0l-.4.4a.253.253 0 0 0 0 .37l3.734 3.734a.253.253 0 0 0 .368 0L7.918.86a.253.253 0 0 0 0-.368z"/>
+            </svg>
+            </div>
+        </div>
+        <div class="container just_btwn mob_filter">
           <div class="header__selects just_btwn">
             <div class="header__dropdown">
               <img src="./img/place.svg" alt="" />
@@ -76,15 +130,9 @@
                 <option value="">Город4</option>
               </select>
             </div>
-            <div class="header__dropdown">
-              <img src="./img/calendar.svg" alt="" />
-              <select name="date" id="date">
-                <option value="">Дата</option>
-                <option value="">02.02.19</option>
-                <option value="">03.03.19</option>
-                <option value="">04.02.19</option>
-                <option value="">04.04.19</option>
-              </select>
+            <div class="header__dropdown date_drop">
+             <img src="./img/calendar.svg" alt="" />
+             <input type='text' placeholder="Дата"  class="datepicker-here"  />
             </div>
           </div>
           <div class="header__check just_btwn">
@@ -121,35 +169,34 @@
             </div>
           </div>
           <div class="more">
+            <div>
             <img src="./img/more.svg" alt="" />
+            </div>
+            <div class=" header__check more__checks">
+                <div>
+                    <input type="checkbox" id="checkbox5" name="checkbox5" />
+                    <label for="checkbox5">Детям</label>
+                  </div>
+              <div>
+                <input type="checkbox" id="checkbox6" name="checkbox6" />
+                <label for="checkbox6">Клубы</label>
+              </div>
+              <div>
+                <input type="checkbox" id="checkbox7" name="checkbox7" />
+                <label for="checkbox7">Фестивали</label>
+              </div>
+              <div>
+                <input type="checkbox" id="checkbox8" name="checkbox8" />
+                <label for="checkbox8">asd</label>
+              </div>
+              <div>
+                <input type="checkbox" id="checkbox9" name="checkbox9" />
+                <label for="checkbox9">asdasdas</label>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="head__mobile">
-        <div class="container  just_btwn">
-          <div class="header__lang">
-            <span>Рус</span>
-            <ul>
-              <li>Укр</li>
-              <li>Eng</li>
-            </ul>
-          </div>
-          <div class="header__login">
-            <img src="./img/login.svg" alt="" />
-            <span>Войти</span>
-          </div>
-          <div class="search_block">
-            <img src="./img/search.svg" alt="" />
-            <form action="" autocomplete="on">
-              <input id="search" name="search" type="text" placeholder="What're we looking for ?" />
-              <button id="search_submit" type="submit">
-                <img src="./img/search.svg" alt="" />
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
   </header>
   <main>
     <section class="big__slider">
@@ -168,7 +215,9 @@
             </div>
             <div>
               <a class="red_btn" href="">
-                <img src="./img/tickets.svg" alt="" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                    <path fill="#FFF" fill-rule="nonzero" d="M20.744 0l2.583 5.49-.864.45a2.024 2.024 0 0 0-1.094 1.801c0 1.119.91 2.029 2.028 2.029h2.587v6.086H24.97c-1.119 0-2.03.91-2.03 2.029 0 1.119.911 2.029 2.03 2.029h1.014V26H.016v-6.086H1.03c1.119 0 2.03-.91 2.03-2.029 0-1.119-.911-2.029-2.03-2.029H.016V9.77h.026L.04 9.765 20.744 0zm-3.382 11.799H2.045v2.157a4.065 4.065 0 0 1 3.043 3.929 4.065 4.065 0 0 1-3.043 3.93v2.156h15.317a1.014 1.014 0 1 1 2.029 0h4.564v-2.157a4.065 4.065 0 0 1-3.043-3.929 4.065 4.065 0 0 1 3.043-3.93V11.8h-4.564a1.014 1.014 0 1 1-2.03 0zm1.014 8.115a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.043a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.044a1.014 1.014 0 1 1 0 2.03 1.014 1.014 0 0 1 0-2.03zm1.396-11.126l-4.12 1.944a1.014 1.014 0 0 1-1.832.864L4.786 9.77h15.1a4.031 4.031 0 0 1-.546-2.029c0-1.183.509-2.282 1.372-3.042l-.94-1.998zm-3.73 4.127a1.014 1.014 0 1 1 0 2.029 1.014 1.014 0 0 1 0-2.029z"/>
+                </svg>
                 <span>
                   Купить билет
                 </span>
@@ -196,7 +245,9 @@
             </div>
             <div>
               <a class="red_btn" href="">
-                <img src="./img/tickets.svg" alt="" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                    <path fill="#FFF" fill-rule="nonzero" d="M20.744 0l2.583 5.49-.864.45a2.024 2.024 0 0 0-1.094 1.801c0 1.119.91 2.029 2.028 2.029h2.587v6.086H24.97c-1.119 0-2.03.91-2.03 2.029 0 1.119.911 2.029 2.03 2.029h1.014V26H.016v-6.086H1.03c1.119 0 2.03-.91 2.03-2.029 0-1.119-.911-2.029-2.03-2.029H.016V9.77h.026L.04 9.765 20.744 0zm-3.382 11.799H2.045v2.157a4.065 4.065 0 0 1 3.043 3.929 4.065 4.065 0 0 1-3.043 3.93v2.156h15.317a1.014 1.014 0 1 1 2.029 0h4.564v-2.157a4.065 4.065 0 0 1-3.043-3.929 4.065 4.065 0 0 1 3.043-3.93V11.8h-4.564a1.014 1.014 0 1 1-2.03 0zm1.014 8.115a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.043a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.044a1.014 1.014 0 1 1 0 2.03 1.014 1.014 0 0 1 0-2.03zm1.396-11.126l-4.12 1.944a1.014 1.014 0 0 1-1.832.864L4.786 9.77h15.1a4.031 4.031 0 0 1-.546-2.029c0-1.183.509-2.282 1.372-3.042l-.94-1.998zm-3.73 4.127a1.014 1.014 0 1 1 0 2.029 1.014 1.014 0 0 1 0-2.029z"/>
+                </svg>
                 <span>
                   Купить билет
                 </span>
@@ -360,7 +411,7 @@
           Все мероприятия
         </h2>
         <div class="row">
-          <div class="col-lg-6 big__event__col">
+          <div class="col-xl-6 col-lg-8 big__event__col">
             <div class="big__event event">
               <div class="event__img__part">
                 <a href="">
@@ -396,7 +447,9 @@
                 </div>
 
                 <a class="red_btn" href="">
-                  <img src="./img/tickets.svg" alt="" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                      <path fill="#FFF" fill-rule="nonzero" d="M20.744 0l2.583 5.49-.864.45a2.024 2.024 0 0 0-1.094 1.801c0 1.119.91 2.029 2.028 2.029h2.587v6.086H24.97c-1.119 0-2.03.91-2.03 2.029 0 1.119.911 2.029 2.03 2.029h1.014V26H.016v-6.086H1.03c1.119 0 2.03-.91 2.03-2.029 0-1.119-.911-2.029-2.03-2.029H.016V9.77h.026L.04 9.765 20.744 0zm-3.382 11.799H2.045v2.157a4.065 4.065 0 0 1 3.043 3.929 4.065 4.065 0 0 1-3.043 3.93v2.156h15.317a1.014 1.014 0 1 1 2.029 0h4.564v-2.157a4.065 4.065 0 0 1-3.043-3.929 4.065 4.065 0 0 1 3.043-3.93V11.8h-4.564a1.014 1.014 0 1 1-2.03 0zm1.014 8.115a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.043a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.044a1.014 1.014 0 1 1 0 2.03 1.014 1.014 0 0 1 0-2.03zm1.396-11.126l-4.12 1.944a1.014 1.014 0 0 1-1.832.864L4.786 9.77h15.1a4.031 4.031 0 0 1-.546-2.029c0-1.183.509-2.282 1.372-3.042l-.94-1.998zm-3.73 4.127a1.014 1.014 0 1 1 0 2.029 1.014 1.014 0 0 1 0-2.029z"/>
+                  </svg>
                   <span>
                     Купить
                   </span>
@@ -404,13 +457,15 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3  col-sm-6">
+          <div class="col-xl-3 col-md-5 col-lg-4  col-6">
             <div class="small_event event">
               <div class="event__img__part">
                 <a href="">
                   <img src="./img/ban1.png" alt="" />
                   <a class="red_btn" href="">
-                    <img src="./img/tickets.svg" alt="" />
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                        <path fill="#FFF" fill-rule="nonzero" d="M20.744 0l2.583 5.49-.864.45a2.024 2.024 0 0 0-1.094 1.801c0 1.119.91 2.029 2.028 2.029h2.587v6.086H24.97c-1.119 0-2.03.91-2.03 2.029 0 1.119.911 2.029 2.03 2.029h1.014V26H.016v-6.086H1.03c1.119 0 2.03-.91 2.03-2.029 0-1.119-.911-2.029-2.03-2.029H.016V9.77h.026L.04 9.765 20.744 0zm-3.382 11.799H2.045v2.157a4.065 4.065 0 0 1 3.043 3.929 4.065 4.065 0 0 1-3.043 3.93v2.156h15.317a1.014 1.014 0 1 1 2.029 0h4.564v-2.157a4.065 4.065 0 0 1-3.043-3.929 4.065 4.065 0 0 1 3.043-3.93V11.8h-4.564a1.014 1.014 0 1 1-2.03 0zm1.014 8.115a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.043a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.044a1.014 1.014 0 1 1 0 2.03 1.014 1.014 0 0 1 0-2.03zm1.396-11.126l-4.12 1.944a1.014 1.014 0 0 1-1.832.864L4.786 9.77h15.1a4.031 4.031 0 0 1-.546-2.029c0-1.183.509-2.282 1.372-3.042l-.94-1.998zm-3.73 4.127a1.014 1.014 0 1 1 0 2.029 1.014 1.014 0 0 1 0-2.029z"/>
+                    </svg>
                   </a>
                 </a>
               </div>
@@ -446,13 +501,15 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6">
+          <div class="col-xl-3 col-md-5 col-lg-4 col-6">
             <div class="small_event event">
               <div class="event__img__part">
                 <a href="">
                   <img src="./img/ban2.png" alt="" />
                   <a class="red_btn" href="">
-                    <img src="./img/tickets.svg" alt="" />
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                        <path fill="#FFF" fill-rule="nonzero" d="M20.744 0l2.583 5.49-.864.45a2.024 2.024 0 0 0-1.094 1.801c0 1.119.91 2.029 2.028 2.029h2.587v6.086H24.97c-1.119 0-2.03.91-2.03 2.029 0 1.119.911 2.029 2.03 2.029h1.014V26H.016v-6.086H1.03c1.119 0 2.03-.91 2.03-2.029 0-1.119-.911-2.029-2.03-2.029H.016V9.77h.026L.04 9.765 20.744 0zm-3.382 11.799H2.045v2.157a4.065 4.065 0 0 1 3.043 3.929 4.065 4.065 0 0 1-3.043 3.93v2.156h15.317a1.014 1.014 0 1 1 2.029 0h4.564v-2.157a4.065 4.065 0 0 1-3.043-3.929 4.065 4.065 0 0 1 3.043-3.93V11.8h-4.564a1.014 1.014 0 1 1-2.03 0zm1.014 8.115a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.043a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.044a1.014 1.014 0 1 1 0 2.03 1.014 1.014 0 0 1 0-2.03zm1.396-11.126l-4.12 1.944a1.014 1.014 0 0 1-1.832.864L4.786 9.77h15.1a4.031 4.031 0 0 1-.546-2.029c0-1.183.509-2.282 1.372-3.042l-.94-1.998zm-3.73 4.127a1.014 1.014 0 1 1 0 2.029 1.014 1.014 0 0 1 0-2.029z"/>
+                    </svg>
                   </a>
                 </a>
               </div>
@@ -482,13 +539,15 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6">
+          <div class="col-xl-3  col-md-5 col-lg-4 col-6">
             <div class="small_event event">
               <div class="event__img__part">
                 <a href="">
                   <img src="./img/cont_1.png" alt="" />
                   <a class="red_btn" href="">
-                    <img src="./img/tickets.svg" alt="" />
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                        <path fill="#FFF" fill-rule="nonzero" d="M20.744 0l2.583 5.49-.864.45a2.024 2.024 0 0 0-1.094 1.801c0 1.119.91 2.029 2.028 2.029h2.587v6.086H24.97c-1.119 0-2.03.91-2.03 2.029 0 1.119.911 2.029 2.03 2.029h1.014V26H.016v-6.086H1.03c1.119 0 2.03-.91 2.03-2.029 0-1.119-.911-2.029-2.03-2.029H.016V9.77h.026L.04 9.765 20.744 0zm-3.382 11.799H2.045v2.157a4.065 4.065 0 0 1 3.043 3.929 4.065 4.065 0 0 1-3.043 3.93v2.156h15.317a1.014 1.014 0 1 1 2.029 0h4.564v-2.157a4.065 4.065 0 0 1-3.043-3.929 4.065 4.065 0 0 1 3.043-3.93V11.8h-4.564a1.014 1.014 0 1 1-2.03 0zm1.014 8.115a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.043a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.044a1.014 1.014 0 1 1 0 2.03 1.014 1.014 0 0 1 0-2.03zm1.396-11.126l-4.12 1.944a1.014 1.014 0 0 1-1.832.864L4.786 9.77h15.1a4.031 4.031 0 0 1-.546-2.029c0-1.183.509-2.282 1.372-3.042l-.94-1.998zm-3.73 4.127a1.014 1.014 0 1 1 0 2.029 1.014 1.014 0 0 1 0-2.029z"/>
+                    </svg>
                   </a>
                 </a>
               </div>
@@ -518,7 +577,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6 full__size_banner">
+          <div class="col-xl-3 col-md-5 col-lg-4 col-6 full__size_banner">
             <div class="small_event event">
               <div class="event__img__part">
                 <a href="">
@@ -527,7 +586,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6  big__event__col">
+          <div class="col-xl-6 col-lg-8  big__event__col">
             <div class="big__event event right_side__event">
               <div class="event__img__part">
                 <a href="">
@@ -556,9 +615,10 @@
                   <img src="./img/place2.svg" alt="" />
                   <span>Berlin</span>
                 </div>
-
                 <a class="red_btn" href="">
-                  <img src="./img/tickets.svg" alt="" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                      <path fill="#FFF" fill-rule="nonzero" d="M20.744 0l2.583 5.49-.864.45a2.024 2.024 0 0 0-1.094 1.801c0 1.119.91 2.029 2.028 2.029h2.587v6.086H24.97c-1.119 0-2.03.91-2.03 2.029 0 1.119.911 2.029 2.03 2.029h1.014V26H.016v-6.086H1.03c1.119 0 2.03-.91 2.03-2.029 0-1.119-.911-2.029-2.03-2.029H.016V9.77h.026L.04 9.765 20.744 0zm-3.382 11.799H2.045v2.157a4.065 4.065 0 0 1 3.043 3.929 4.065 4.065 0 0 1-3.043 3.93v2.156h15.317a1.014 1.014 0 1 1 2.029 0h4.564v-2.157a4.065 4.065 0 0 1-3.043-3.929 4.065 4.065 0 0 1 3.043-3.93V11.8h-4.564a1.014 1.014 0 1 1-2.03 0zm1.014 8.115a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.043a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.044a1.014 1.014 0 1 1 0 2.03 1.014 1.014 0 0 1 0-2.03zm1.396-11.126l-4.12 1.944a1.014 1.014 0 0 1-1.832.864L4.786 9.77h15.1a4.031 4.031 0 0 1-.546-2.029c0-1.183.509-2.282 1.372-3.042l-.94-1.998zm-3.73 4.127a1.014 1.014 0 1 1 0 2.029 1.014 1.014 0 0 1 0-2.029z"/>
+                  </svg>
                   <span>
                     Купить
                   </span>
@@ -566,7 +626,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 big__event__col">
+          <div class="col-xl-6 col-lg-8 big__event__col">
             <div class="big__event event">
               <div class="event__img__part">
                 <a href="">
@@ -597,7 +657,9 @@
                 </div>
 
                 <a class="red_btn" href="">
-                  <img src="./img/tickets.svg" alt="" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                      <path fill="#FFF" fill-rule="nonzero" d="M20.744 0l2.583 5.49-.864.45a2.024 2.024 0 0 0-1.094 1.801c0 1.119.91 2.029 2.028 2.029h2.587v6.086H24.97c-1.119 0-2.03.91-2.03 2.029 0 1.119.911 2.029 2.03 2.029h1.014V26H.016v-6.086H1.03c1.119 0 2.03-.91 2.03-2.029 0-1.119-.911-2.029-2.03-2.029H.016V9.77h.026L.04 9.765 20.744 0zm-3.382 11.799H2.045v2.157a4.065 4.065 0 0 1 3.043 3.929 4.065 4.065 0 0 1-3.043 3.93v2.156h15.317a1.014 1.014 0 1 1 2.029 0h4.564v-2.157a4.065 4.065 0 0 1-3.043-3.929 4.065 4.065 0 0 1 3.043-3.93V11.8h-4.564a1.014 1.014 0 1 1-2.03 0zm1.014 8.115a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.043a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.044a1.014 1.014 0 1 1 0 2.03 1.014 1.014 0 0 1 0-2.03zm1.396-11.126l-4.12 1.944a1.014 1.014 0 0 1-1.832.864L4.786 9.77h15.1a4.031 4.031 0 0 1-.546-2.029c0-1.183.509-2.282 1.372-3.042l-.94-1.998zm-3.73 4.127a1.014 1.014 0 1 1 0 2.029 1.014 1.014 0 0 1 0-2.029z"/>
+                  </svg>
                   <span>
                     Купить
                   </span>
@@ -605,13 +667,15 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3  col-sm-6">
+          <div class="col-xl-3 col-md-5 col-lg-4  col-6">
             <div class="small_event event">
               <div class="event__img__part">
                 <a href="">
                   <img src="./img/cont_5.png" alt="" />
                   <a class="red_btn" href="">
-                    <img src="./img/tickets.svg" alt="" />
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                        <path fill="#FFF" fill-rule="nonzero" d="M20.744 0l2.583 5.49-.864.45a2.024 2.024 0 0 0-1.094 1.801c0 1.119.91 2.029 2.028 2.029h2.587v6.086H24.97c-1.119 0-2.03.91-2.03 2.029 0 1.119.911 2.029 2.03 2.029h1.014V26H.016v-6.086H1.03c1.119 0 2.03-.91 2.03-2.029 0-1.119-.911-2.029-2.03-2.029H.016V9.77h.026L.04 9.765 20.744 0zm-3.382 11.799H2.045v2.157a4.065 4.065 0 0 1 3.043 3.929 4.065 4.065 0 0 1-3.043 3.93v2.156h15.317a1.014 1.014 0 1 1 2.029 0h4.564v-2.157a4.065 4.065 0 0 1-3.043-3.929 4.065 4.065 0 0 1 3.043-3.93V11.8h-4.564a1.014 1.014 0 1 1-2.03 0zm1.014 8.115a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.043a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.044a1.014 1.014 0 1 1 0 2.03 1.014 1.014 0 0 1 0-2.03zm1.396-11.126l-4.12 1.944a1.014 1.014 0 0 1-1.832.864L4.786 9.77h15.1a4.031 4.031 0 0 1-.546-2.029c0-1.183.509-2.282 1.372-3.042l-.94-1.998zm-3.73 4.127a1.014 1.014 0 1 1 0 2.029 1.014 1.014 0 0 1 0-2.029z"/>
+                    </svg>
                   </a>
                 </a>
               </div>
@@ -647,13 +711,15 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6">
+          <div class="col-xl-3 col-md-5 col-lg-4 col-6">
             <div class="small_event event">
               <div class="event__img__part">
                 <a href="">
                   <img src="./img/cont_6.png" alt="" />
                   <a class="red_btn" href="">
-                    <img src="./img/tickets.svg" alt="" />
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                        <path fill="#FFF" fill-rule="nonzero" d="M20.744 0l2.583 5.49-.864.45a2.024 2.024 0 0 0-1.094 1.801c0 1.119.91 2.029 2.028 2.029h2.587v6.086H24.97c-1.119 0-2.03.91-2.03 2.029 0 1.119.911 2.029 2.03 2.029h1.014V26H.016v-6.086H1.03c1.119 0 2.03-.91 2.03-2.029 0-1.119-.911-2.029-2.03-2.029H.016V9.77h.026L.04 9.765 20.744 0zm-3.382 11.799H2.045v2.157a4.065 4.065 0 0 1 3.043 3.929 4.065 4.065 0 0 1-3.043 3.93v2.156h15.317a1.014 1.014 0 1 1 2.029 0h4.564v-2.157a4.065 4.065 0 0 1-3.043-3.929 4.065 4.065 0 0 1 3.043-3.93V11.8h-4.564a1.014 1.014 0 1 1-2.03 0zm1.014 8.115a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.043a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.044a1.014 1.014 0 1 1 0 2.03 1.014 1.014 0 0 1 0-2.03zm1.396-11.126l-4.12 1.944a1.014 1.014 0 0 1-1.832.864L4.786 9.77h15.1a4.031 4.031 0 0 1-.546-2.029c0-1.183.509-2.282 1.372-3.042l-.94-1.998zm-3.73 4.127a1.014 1.014 0 1 1 0 2.029 1.014 1.014 0 0 1 0-2.029z"/>
+                    </svg>
                   </a>
                 </a>
               </div>
@@ -683,13 +749,15 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3  col-sm-6">
+          <div class="col-xl-3 col-md-5 col-lg-4  col-6">
             <div class="small_event event">
               <div class="event__img__part">
                 <a href="">
                   <img src="./img/cont_5.png" alt="" />
                   <a class="red_btn" href="">
-                    <img src="./img/tickets.svg" alt="" />
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                        <path fill="#FFF" fill-rule="nonzero" d="M20.744 0l2.583 5.49-.864.45a2.024 2.024 0 0 0-1.094 1.801c0 1.119.91 2.029 2.028 2.029h2.587v6.086H24.97c-1.119 0-2.03.91-2.03 2.029 0 1.119.911 2.029 2.03 2.029h1.014V26H.016v-6.086H1.03c1.119 0 2.03-.91 2.03-2.029 0-1.119-.911-2.029-2.03-2.029H.016V9.77h.026L.04 9.765 20.744 0zm-3.382 11.799H2.045v2.157a4.065 4.065 0 0 1 3.043 3.929 4.065 4.065 0 0 1-3.043 3.93v2.156h15.317a1.014 1.014 0 1 1 2.029 0h4.564v-2.157a4.065 4.065 0 0 1-3.043-3.929 4.065 4.065 0 0 1 3.043-3.93V11.8h-4.564a1.014 1.014 0 1 1-2.03 0zm1.014 8.115a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.043a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.044a1.014 1.014 0 1 1 0 2.03 1.014 1.014 0 0 1 0-2.03zm1.396-11.126l-4.12 1.944a1.014 1.014 0 0 1-1.832.864L4.786 9.77h15.1a4.031 4.031 0 0 1-.546-2.029c0-1.183.509-2.282 1.372-3.042l-.94-1.998zm-3.73 4.127a1.014 1.014 0 1 1 0 2.029 1.014 1.014 0 0 1 0-2.029z"/>
+                    </svg>
                   </a>
                 </a>
               </div>
@@ -725,13 +793,15 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6">
+          <div class="col-xl-3 col-md-5 col-lg-4 col-6">
             <div class="small_event event">
               <div class="event__img__part">
                 <a href="">
                   <img src="./img/ban2.png" alt="" />
                   <a class="red_btn" href="">
-                    <img src="./img/tickets.svg" alt="" />
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                        <path fill="#FFF" fill-rule="nonzero" d="M20.744 0l2.583 5.49-.864.45a2.024 2.024 0 0 0-1.094 1.801c0 1.119.91 2.029 2.028 2.029h2.587v6.086H24.97c-1.119 0-2.03.91-2.03 2.029 0 1.119.911 2.029 2.03 2.029h1.014V26H.016v-6.086H1.03c1.119 0 2.03-.91 2.03-2.029 0-1.119-.911-2.029-2.03-2.029H.016V9.77h.026L.04 9.765 20.744 0zm-3.382 11.799H2.045v2.157a4.065 4.065 0 0 1 3.043 3.929 4.065 4.065 0 0 1-3.043 3.93v2.156h15.317a1.014 1.014 0 1 1 2.029 0h4.564v-2.157a4.065 4.065 0 0 1-3.043-3.929 4.065 4.065 0 0 1 3.043-3.93V11.8h-4.564a1.014 1.014 0 1 1-2.03 0zm1.014 8.115a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.043a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.044a1.014 1.014 0 1 1 0 2.03 1.014 1.014 0 0 1 0-2.03zm1.396-11.126l-4.12 1.944a1.014 1.014 0 0 1-1.832.864L4.786 9.77h15.1a4.031 4.031 0 0 1-.546-2.029c0-1.183.509-2.282 1.372-3.042l-.94-1.998zm-3.73 4.127a1.014 1.014 0 1 1 0 2.029 1.014 1.014 0 0 1 0-2.029z"/>
+                    </svg>
                   </a>
                 </a>
               </div>
@@ -761,7 +831,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6  big__event__col">
+          <div class="col-xl-6 col-lg-8  big__event__col">
             <div class="big__event event right_side__event">
               <div class="event__img__part">
                 <a href="">
@@ -792,7 +862,9 @@
                 </div>
 
                 <a class="red_btn" href="">
-                  <img src="./img/tickets.svg" alt="" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                      <path fill="#FFF" fill-rule="nonzero" d="M20.744 0l2.583 5.49-.864.45a2.024 2.024 0 0 0-1.094 1.801c0 1.119.91 2.029 2.028 2.029h2.587v6.086H24.97c-1.119 0-2.03.91-2.03 2.029 0 1.119.911 2.029 2.03 2.029h1.014V26H.016v-6.086H1.03c1.119 0 2.03-.91 2.03-2.029 0-1.119-.911-2.029-2.03-2.029H.016V9.77h.026L.04 9.765 20.744 0zm-3.382 11.799H2.045v2.157a4.065 4.065 0 0 1 3.043 3.929 4.065 4.065 0 0 1-3.043 3.93v2.156h15.317a1.014 1.014 0 1 1 2.029 0h4.564v-2.157a4.065 4.065 0 0 1-3.043-3.929 4.065 4.065 0 0 1 3.043-3.93V11.8h-4.564a1.014 1.014 0 1 1-2.03 0zm1.014 8.115a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.043a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.044a1.014 1.014 0 1 1 0 2.03 1.014 1.014 0 0 1 0-2.03zm1.396-11.126l-4.12 1.944a1.014 1.014 0 0 1-1.832.864L4.786 9.77h15.1a4.031 4.031 0 0 1-.546-2.029c0-1.183.509-2.282 1.372-3.042l-.94-1.998zm-3.73 4.127a1.014 1.014 0 1 1 0 2.029 1.014 1.014 0 0 1 0-2.029z"/>
+                  </svg>
                   <span>
                     Купить
                   </span>
@@ -800,11 +872,133 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="more__content">
+          <div class="col-xl-6 col-lg-8 more__events  big__event__col">
+              <div class="big__event event right_side__event">
+                <div class="event__img__part">
+                  <a href="">
+                    <img src="./img/cont_3.png" alt="" />
+                  </a>
+                </div>
+                <div class="event__text__part">
+                  <p>
+                    Noize MC в Берлине и Мюнхене
+                  </p>
+                  <div class=" date__block">
+                    <p>c</p>
+                    <span>
+                      19
+                    </span>
+                    <div>
+                      <p>августа</p>
+                      <p>2019</p>
+                    </div>
+                  </div>
+                  <div class="event__price event__details">
+                    <img src="./img/wallet.svg" alt="" />
+                    <span>35-75€</span>
+                  </div>
+                  <div class="event__location  event__details">
+                    <img src="./img/place2.svg" alt="" />
+                    <span>Berlin</span>
+                  </div>
+  
+                  <a class="red_btn" href="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                        <path fill="#FFF" fill-rule="nonzero" d="M20.744 0l2.583 5.49-.864.45a2.024 2.024 0 0 0-1.094 1.801c0 1.119.91 2.029 2.028 2.029h2.587v6.086H24.97c-1.119 0-2.03.91-2.03 2.029 0 1.119.911 2.029 2.03 2.029h1.014V26H.016v-6.086H1.03c1.119 0 2.03-.91 2.03-2.029 0-1.119-.911-2.029-2.03-2.029H.016V9.77h.026L.04 9.765 20.744 0zm-3.382 11.799H2.045v2.157a4.065 4.065 0 0 1 3.043 3.929 4.065 4.065 0 0 1-3.043 3.93v2.156h15.317a1.014 1.014 0 1 1 2.029 0h4.564v-2.157a4.065 4.065 0 0 1-3.043-3.929 4.065 4.065 0 0 1 3.043-3.93V11.8h-4.564a1.014 1.014 0 1 1-2.03 0zm1.014 8.115a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.043a1.014 1.014 0 1 1 0 2.028 1.014 1.014 0 0 1 0-2.028zm0-3.044a1.014 1.014 0 1 1 0 2.03 1.014 1.014 0 0 1 0-2.03zm1.396-11.126l-4.12 1.944a1.014 1.014 0 0 1-1.832.864L4.786 9.77h15.1a4.031 4.031 0 0 1-.546-2.029c0-1.183.509-2.282 1.372-3.042l-.94-1.998zm-3.73 4.127a1.014 1.014 0 1 1 0 2.029 1.014 1.014 0 0 1 0-2.029z"/>
+                    </svg>
+                    <span>
+                      Купить
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+              <div class="col-xl-3 col-md-5 col-lg-4  col-6 more__events">
+                <div class="small_event event">
+                  <div class="event__img__part">
+                    <a href="">
+                      <img src="./img/cont_5.png" alt="" />
+                      <a class="red_btn" href="">
+                        <img src="./img/tickets.svg" alt="" />
+                      </a>
+                    </a>
+                  </div>
+                  <div class="event__text__part">
+                    <p>
+                      Федук в Германии с новой программой
+                    </p>
+                    <div>
+                      <div class=" date__block">
+                        <p>c</p>
+                        <span>
+                          19
+                        </span>
+                        <div>
+                          <p>августа</p>
+                          <p>2019</p>
+                        </div>
+                      </div>
+                      <div class="event__price event__details">
+                        <img src="./img/wallet.svg" alt="" />
+                        <span>35-75€</span>
+                      </div>
+                      <div class="event__location more__location event__details">
+                        <img src="./img/place2.svg" alt="" />
+                        <span>8 городов</span>
+                        <ul class="list__places">
+                          <li>asdasdasd</li>
+                          <li>adssadasd</li>
+                          <li>asdasds</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-5 col-lg-4 col-6 more__events">
+                <div class="small_event event">
+                  <div class="event__img__part">
+                    <a href="">
+                      <img src="./img/cont_6.png" alt="" />
+                      <a class="red_btn" href="">
+                        <img src="./img/tickets.svg" alt="" />
+                      </a>
+                    </a>
+                  </div>
+                  <div class="event__text__part">
+                    <p>
+                      Московский Классический Балет - Лебединое озеро
+                    </p>
+                    <div>
+                      <div class=" date__block">
+                        <span>
+                          19
+                        </span>
+                        <div>
+                          <p>августа</p>
+                          <p>2019</p>
+                        </div>
+                      </div>
+                      <div class="event__price event__details">
+                        <img src="./img/wallet.svg" alt="" />
+                        <span>35-75€</span>
+                      </div>
+                      <div class="event__location event__details">
+                        <img src="./img/place2.svg" alt="" />
+                        <span>Alzey-Kirchheimbolanden</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <div class="more__content ">
           <img src="./img/reload.svg" alt="" />
-          <span>
+          <span >
             Показать еще 6
+          </span>
+          <span class="hide_text">
+              Скрыть контент
           </span>
         </div>
         <div class="horizontal__baner">
@@ -821,22 +1015,25 @@
     </section>
     <section class="our_plasses">
       <div class="container">
-        <div class="row">
-          <div class="col-xl-3">
+        <div class="row just_center">
+          <div class="col-lg-3 col-md-5 col-sm-6">
             <div class="our_plus">
               <img src="./img/point.svg" alt="" />
-              <p class="our_plus__title">
-                Удобство
-              </p>
-              <p>
-                Вы можете купить электронный билет, находясь в любой точке мира – Вам достаточно
-                иметь доступ в Интернет
-              </p>
+              <div>
+                  <p class="our_plus__title">
+                      Удобство
+                    </p>
+                    <p>
+                      Вы можете купить электронный билет, находясь в любой точке мира – Вам достаточно
+                      иметь доступ в Интернет
+                    </p>
+              </div>
             </div>
           </div>
-          <div class="col-xl-3">
+          <div class="col-lg-3 col-md-5 col-sm-6">
             <div class="our_plus">
               <img src="./img/search_big.svg" alt="" />
+              <div>
               <p class="our_plus__title">
                 Большой выбор
               </p>
@@ -845,10 +1042,12 @@
                 музыкальных концертов
               </p>
             </div>
+            </div>
           </div>
-          <div class="col-xl-3">
+          <div class="col-lg-3 col-md-5 col-sm-6">
             <div class="our_plus">
               <img src="./img/wallet_big.svg" alt="" />
+              <div>
               <p class="our_plus__title">
                 Выгода
               </p>
@@ -857,10 +1056,12 @@
                 номинальной цене
               </p>
             </div>
+            </div>
           </div>
-          <div class="col-xl-3">
+          <div class="col-lg-3 col-md-5  col-sm-6">
             <div class="our_plus">
               <img src="./img/security.svg" alt="" />
+              <div>
               <p class="our_plus__title">
                 Надежность
               </p>
@@ -868,6 +1069,7 @@
                 Работаем исключительно с проверенными и надежными организаторами так как мы дорожим
                 своей репутацией
               </p>
+            </div>
             </div>
           </div>
         </div>
@@ -884,10 +1086,16 @@
         </div>
         <div class="actual_search__right">
           <form action="">
-            <input placeholder="Электронная почта" type="text" />
+            <input placeholder="Электронная почта" type="email" />
+            <div class="invalid">
+                Неправильно заполненное поле
+            </div>
             <div class="triengle"></div>
+           
             <button class="red_btn" type="submit">
-              <img src="./img/send.svg" alt="" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28">
+                  <path fill="#FFF" fill-rule="nonzero" d="M25.482.254A1.133 1.133 0 0 0 24.278.2L.602 13.73a1.127 1.127 0 0 0 .203 2.048l7.743 2.58.508 7.698a1.125 1.125 0 0 0 1.125 1.053c.36 0 .705-.172.92-.475l4.255-6.007 5.743 1.914a1.112 1.112 0 0 0 .938-.104c.283-.169.477-.454.53-.78L25.95 1.364c.071-.43-.11-.862-.468-1.11zM9.224 16.207l-5.314-1.77 14.993-8.568-9.68 10.338zm1.874 6.531l-.238-3.61 2.261.755-2.023 2.855zm9.463-2.752l-8.982-2.994 11.535-12.32-2.553 15.314z"/>
+              </svg>
               <span> Подписаться</span>
             </button>
           </form>
@@ -952,9 +1160,10 @@
   <footer>
     <div class="container">
       <div class="row just_btwn">
-          <div class="col-lg-6">
+          <div class="col-lg-6 col-md-4">
               <p class="footer__title">
                 Меню
+                <img src="./img/white_ar.svg" alt="">
               </p>
               <div class="footer__lists">
                 <ul>
@@ -974,9 +1183,11 @@
                 </ul>
               </div>
             </div>
-            <div class="col-lg-4 event_col">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xl-4 event_col">
               <p class="footer__title">
                 Мероприятия
+                <img src="./img/white_ar.svg" alt="">
+
               </p>
               <div class="footer__lists">
                 <ul>
@@ -992,16 +1203,53 @@
                 </ul>
               </div>
             </div>
-            <div class="col-lg-2 soc_col">
+            <div class="col-xl-2 col-md-4 col-sm-6 col-lg-3 soc_col">
                 <p class="footer__title">
                     Наши соцсети
+                    <img src="./img/white_ar.svg" alt="">
+
                   </p>
                   <div class="footer__lists">
                     <ul>
-                      <li><a href=""> <img src="./img/1.svg" alt=""></a></li>
-                      <li><a href=""> <img src="./img/2.svg" alt=""></a></li>
-                      <li><a href=""> <img src="./img/3.svg" alt=""></a></li>
-                      <li><a href=""> <img src="./img/4.svg" alt=""></a></li>
+                      <li class="face"><a href="">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                            <path fill="#FFF" fill-rule="nonzero" d="M0 0v19.988h10.645v-7.72H8.043V9.114h2.602V6.468a3.486 3.486 0 0 1 3.486-3.486h2.72v2.835h-1.947c-.611 0-1.107.496-1.107 1.107v2.191h3.005l-.415 3.152h-2.59v7.721h6.191V0H0z" opacity=".4"/>
+                        </svg>
+                        
+                      <span>Facebook</span>
+                      </a></li>
+                      <li class="vk"><a href="">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                            <path fill="#FFF" fill-rule="nonzero" d="M0 0v20h20V0H0zm14.993 11.065c.46.448.945.87 1.357 1.365.182.219.354.444.486.698.186.363.017.761-.307.783h-2.017c-.52.042-.935-.168-1.285-.524-.278-.284-.538-.587-.807-.88a1.9 1.9 0 0 0-.362-.324c-.275-.178-.514-.124-.672.163-.16.292-.197.617-.212.942-.022.475-.166.6-.642.622-1.02.047-1.988-.108-2.886-.621-.794-.453-1.408-1.094-1.943-1.818-1.041-1.412-1.84-2.962-2.556-4.557-.162-.36-.043-.552.352-.56a55.22 55.22 0 0 1 1.975 0c.268.005.446.158.548.41.356.875.792 1.708 1.338 2.48.147.206.295.41.506.556.234.161.412.108.522-.153.07-.166.101-.343.116-.52a7.795 7.795 0 0 0-.032-1.824c-.056-.379-.27-.624-.648-.695-.193-.037-.164-.108-.07-.218.162-.19.315-.308.619-.308h2.279c.359.07.44.232.488.593l.002 2.533c-.004.14.07.554.321.646.201.067.335-.095.456-.223.546-.579.935-1.264 1.283-1.972.154-.312.287-.636.417-.96.095-.24.244-.357.514-.353l2.194.003c.065 0 .132 0 .196.01.369.064.47.223.355.585-.179.566-.53 1.038-.872 1.511-.366.507-.756.996-1.12 1.505-.333.466-.307.7.107 1.105z" opacity=".4"/>
+                        </svg>
+                        <span>
+                          Vk
+                        </span>
+                      </a></li>
+                      <li class="inst"><a href=""> 
+                          <svg
+                           xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"> 
+                            <defs>
+                              <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                  <stop offset="0%" stop-color="#D71D88"/>
+                                  <stop offset="100%" stop-color="#F16F35"/>
+                              </linearGradient>
+                          </defs>
+                            <path fill="#FFF" fill-rule="nonzero" d="M13.868 9.138h1.253v5.387a.596.596 0 0 1-.596.596H5.448a.596.596 0 0 1-.596-.596V9.138h1.253a3.973 3.973 0 1 0 7.763 0zm-3.882 3.525a2.676 2.676 0 1 0 0-5.353 2.676 2.676 0 0 0 0 5.353zm3.207-5.425h1.02a.541.541 0 0 0 .54-.542V5.677a.541.541 0 0 0-.54-.54h-1.02a.541.541 0 0 0-.541.54v1.02c0 .298.242.54.54.54zM19.973 0v19.973H0V0h19.973zm-3.625 5.23c0-.887-.719-1.605-1.605-1.605H5.23c-.887 0-1.605.718-1.605 1.605v9.513c0 .886.718 1.605 1.605 1.605h9.513c.886 0 1.605-.719 1.605-1.605V5.23z" opacity=".4"/>
+                        </svg>
+                        
+                      <span>
+                        Instagram
+                      </span>
+                      </a></li>
+                      <li class="tel"><a href=""> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                            <path fill="#FFF" fill-rule="nonzero" d="M13.37 7.083l-4.448 4.135a.922.922 0 0 0-.286.552l-.151 1.122c-.02.15-.231.165-.273.02l-.582-2.048a.543.543 0 0 1 .237-.61l5.39-3.32c.096-.06.196.072.113.15zM19.973 0v19.973H0V0h19.973zm-4.445 4.798L4.21 9.164a.325.325 0 0 0 .004.608l2.757 1.03 1.068 3.432c.068.22.337.301.515.156l1.538-1.253a.458.458 0 0 1 .558-.016l2.773 2.013c.191.139.461.034.51-.197l2.03-9.77a.325.325 0 0 0-.435-.369z" opacity=".4"/>
+                        </svg>
+                        <span>
+                          Telegram
+                        </span>
+                      </a></li>
                     </ul>
             </div>
       </div>
@@ -1015,24 +1263,67 @@
         </p>
       </div>
       <div class="made_by">
+        <a href="">
         <img src="./img/planet.svg" alt="">
         <span>
             Сделано в DesignPlanet
         </span>
+      </a>
       </div>
       <div class="pay_by">
-        <img src="./img/visa.svg" alt="">
-        <img src="./img/icon.svg" alt="">
-        <img src="./img/paypal-logo.svg" alt="">
-        <img src="./img/vorkasse.svg" alt="">
-        <img src="./img/sofort.svg" alt="">
+        <a  href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="14" viewBox="0 0 40 14">
+              <g fill="#FFF" fill-rule="nonzero" opacity=".4">
+                  <path d="M3.075 2.963L4.511 13.25h3.527L14.61.512h-3.706L8.113 6.42a60.517 60.517 0 0 0-1.03 2.293 90.686 90.686 0 0 0-.184-2.15L6.33.512H.697l5.862 4.639-3.483-2.188zM17.142 13.25L19.558.511H16.24l-2.42 12.737zM19.087 12.499c.777.582 2.145.931 3.658.931 3.139 0 5.245-1.773 5.245-4.41 0-1.442-.843-2.587-2.57-3.494-.971-.541-1.557-.907-1.557-1.366 0-.43.453-.894 1.52-.894 1.039 0 1.84.406 1.987.487l.378.209 1.06-2.84L28.53.97c-.79-.437-1.776-.651-3.006-.651-3.007 0-5.106 1.755-5.106 4.267 0 1.824 1.434 2.836 2.692 3.514 1.186.613 1.417.964 1.417 1.363 0 .763-.827 1.037-1.534 1.037a5.277 5.277 0 0 1-2.637-.713l-.375-.225-1.121 2.763.228.174zM31.19 13.25l1.425-3.113h2.874l.249 3.112h3.446L37.69.512h-3.855l-6.2 12.737h3.555zm3.464-7.871c.133-.287.269-.61.402-.951.023.303.047.585.065.831l.197 2.179h-1.611l.947-2.06z"/>
+              </g>
+          </svg>          
+        </a>
+        <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" viewBox="0 0 40 25">
+              <defs>
+                  <linearGradient id="a" x1="100%" x2=".153%" y1="50%" y2="50%">
+                      <stop offset="0%" stop-color="#F79F1A"/>
+                      <stop offset="100%" stop-color="#F43C3C"/>
+                  </linearGradient>
+              </defs>
+              <path fill="#FFF" fill-rule="nonzero" d="M27.77 1.274c-2.792 0-5.356.996-7.353 2.65A12.096 12.096 0 0 0 12.155.667C5.443.663 0 6.106 0 12.82c0 6.714 5.443 12.157 12.155 12.157 3.195 0 6.092-1.242 8.262-3.26a11.499 11.499 0 0 0 7.353 2.649c6.366 0 11.546-5.178 11.546-11.546 0-6.369-5.18-11.547-11.546-11.547zm0 20.087c-2.051 0-3.94-.73-5.413-1.947a12.098 12.098 0 0 0 0-13.187 8.495 8.495 0 0 1 5.413-1.942c4.704 0 8.533 3.829 8.533 8.536 0 4.706-3.829 8.54-8.533 8.54z" opacity=".4"/>
+          </svg>
+          
+        </a>
+        <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22">
+              <g fill="#FFF" fill-rule="nonzero" opacity=".4">
+                  <path d="M19.005 4.947c-.2-.246-.431-.47-.688-.671a7.742 7.742 0 0 1-.178 2.033c-.419 1.962-1.42 3.629-2.896 4.82-1.475 1.191-3.316 1.82-5.325 1.82H6.99l-.948 4.443a1.91 1.91 0 0 1-1.86 1.505h-1.32l-.238 1.091a.951.951 0 0 0 .93 1.153H6.78a.95.95 0 0 0 .93-.752l1.109-5.195h3.698c1.79 0 3.424-.556 4.728-1.61 1.304-1.052 2.19-2.532 2.563-4.279.378-1.766.107-3.232-.803-4.358z"/>
+                  <path d="M5.111 17.194l1.109-5.195h3.698c1.79 0 3.424-.556 4.728-1.61 1.304-1.052 2.19-2.533 2.563-4.279.378-1.766.107-3.232-.803-4.358C15.532.672 14.037 0 12.506 0H4.448a.95.95 0 0 0-.928.748L.025 16.793a.95.95 0 0 0 .928 1.153h3.229a.95.95 0 0 0 .93-.752zM8.07 3.654h2.535c.597 0 1.13.25 1.463.687.355.463.458 1.103.285 1.756l-.007.026c-.319 1.346-1.645 2.44-2.956 2.44H6.96l1.11-4.908z"/>
+              </g>
+          </svg>
+        </a>
+        <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="67" height="19" viewBox="0 0 67 19">
+              <g fill="#FFF" fill-rule="nonzero" opacity=".4">
+                  <path d="M9.383.041A9.382 9.382 0 0 0 0 9.424c0 5.184 4.2 9.384 9.383 9.384 5.184 0 9.377-4.2 9.377-9.384 0-5.183-4.2-9.383-9.377-9.383zm3.272 14.137a4.94 4.94 0 0 1-.875.314c-1.14.314-2.287.328-3.421-.041-1.373-.444-2.288-1.38-2.827-2.698-.103-.253-.178-.519-.253-.785H4.193a.324.324 0 0 1-.328-.328v-.724c0-.184.144-.328.328-.328h.888v-.594h-.888a.324.324 0 0 1-.328-.328v-.724c0-.184.144-.327.328-.327h1.134l.04-.11c.308-.97.827-1.796 1.64-2.424.642-.499 1.38-.772 2.178-.901 1.134-.185 2.227-.028 3.292.389.068.027.137.061.198.095.253.15.321.342.205.615-.123.287-.239.574-.369.86-.109.246-.266.321-.526.26-.355-.082-.71-.191-1.072-.266-.758-.157-1.51-.164-2.247.13-.635.252-1.017.73-1.284 1.338-.006.007-.006.014-.006.02H9.58c.185 0 .328.144.328.328v.724a.324.324 0 0 1-.328.328H7.068c-.007.191 0 .39 0 .594h2.52c.185 0 .328.144.328.328v.724a.324.324 0 0 1-.328.328H7.287c.28.792.73 1.406 1.577 1.673.676.212 1.36.198 2.05.061.354-.075.703-.184 1.058-.26.28-.06.43.014.546.267.13.287.253.574.369.867.11.26.04.472-.232.595zM24.599 13.105l-2.431-7.587h1.878l.922 3.21c.26.901.498 1.769.676 2.711h.034c.191-.915.43-1.81.69-2.677l.97-3.244h1.823l-2.554 7.587h-2.008zM34.877 10.292c0 2.014-1.427 2.936-2.902 2.936-1.612 0-2.848-1.058-2.848-2.834 0-1.775 1.168-2.916 2.936-2.916 1.687 0 2.814 1.161 2.814 2.814zm-3.988.054c0 .943.396 1.653 1.127 1.653.662 0 1.092-.662 1.092-1.653 0-.82-.314-1.652-1.092-1.652-.82 0-1.127.846-1.127 1.652zM35.936 9.418c0-.813-.02-1.339-.048-1.81h1.475l.055 1.01h.047c.28-.798.956-1.133 1.49-1.133.156 0 .238 0 .361.02v1.612c-.123-.02-.273-.048-.464-.048-.629 0-1.059.335-1.168.868-.02.109-.034.245-.034.382v2.793h-1.714V9.418zM41.89 9.923h.021c.123-.225.26-.45.396-.663l1.113-1.652h2.063l-1.974 2.226 2.254 3.278H43.66l-1.332-2.26-.437.54v1.72h-1.714v-7.99h1.714v4.8zM49.464 13.105l-.102-.553h-.034c-.362.437-.922.676-1.578.676-1.113 0-1.775-.812-1.775-1.687 0-1.427 1.284-2.117 3.23-2.103v-.082c0-.294-.157-.71-1.004-.71-.56 0-1.161.191-1.523.416l-.314-1.106c.382-.212 1.134-.485 2.137-.485 1.838 0 2.418 1.08 2.418 2.377v1.912c0 .526.02 1.038.082 1.339h-1.537v.006zm-.204-2.595c-.902-.013-1.599.205-1.599.868 0 .437.294.655.677.655.43 0 .778-.28.887-.628.02-.089.035-.191.035-.294v-.6zM52.264 11.61c.315.191.97.416 1.476.416.519 0 .73-.177.73-.464 0-.287-.17-.417-.812-.628-1.134-.383-1.578-1.004-1.564-1.653 0-1.024.88-1.803 2.24-1.803.642 0 1.215.143 1.55.314l-.307 1.182a2.665 2.665 0 0 0-1.196-.314c-.416 0-.655.17-.655.45 0 .26.212.396.888.629 1.045.361 1.488.887 1.495 1.7 0 1.024-.812 1.776-2.383 1.776-.717 0-1.36-.157-1.776-.383l.314-1.222zM57.154 11.61c.314.191.97.416 1.475.416.52 0 .731-.177.731-.464 0-.287-.17-.417-.813-.628-1.133-.383-1.577-1.004-1.564-1.653 0-1.024.881-1.803 2.24-1.803.642 0 1.216.143 1.55.314l-.307 1.182a2.665 2.665 0 0 0-1.195-.314c-.416 0-.655.17-.655.45 0 .26.211.396.887.629 1.045.361 1.49.887 1.496 1.7 0 1.024-.813 1.776-2.383 1.776-.717 0-1.36-.157-1.776-.383l.314-1.222zM63.369 10.9c.054.71.751 1.044 1.55 1.044a4.96 4.96 0 0 0 1.523-.225l.225 1.161c-.56.225-1.25.335-1.994.335-1.871 0-2.936-1.08-2.936-2.8 0-1.394.867-2.937 2.78-2.937 1.775 0 2.45 1.386 2.45 2.745 0 .294-.033.554-.054.677H63.37zm2.014-1.168c0-.417-.177-1.113-.97-1.113-.716 0-1.01.655-1.058 1.113h2.028z"/>
+              </g>
+          </svg>
+          
+        </a>
+        <a  href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="34" viewBox="0 0 30 34">
+              <g fill="#FFF" fill-rule="nonzero" opacity=".4">
+                  <path d="M3.225 33.697c1.392 0 2.405-.95 2.405-2.278 0-1.266-.886-1.772-1.962-2.152-.696-.19-1.14-.38-1.14-.822 0-.443.317-.76.76-.76.38 0 .696.253.95.57l1.139-.696c-.38-.76-1.14-1.203-2.025-1.203-1.393 0-2.279 1.013-2.279 2.152 0 .886.57 1.645 1.899 2.025.76.19 1.202.38 1.202.949 0 .57-.38.886-.949.886-.633 0-1.076-.38-1.392-.76l-.95.95c.57.696 1.393 1.139 2.342 1.139zm5.569 0c-1.456 0-2.658-1.14-2.658-2.595 0-1.392 1.202-2.594 2.658-2.594 1.455 0 2.658 1.139 2.658 2.594 0 1.456-1.203 2.595-2.658 2.595zm0-1.266a1.27 1.27 0 0 0 1.265-1.265c0-.76-.57-1.266-1.265-1.266a1.27 1.27 0 0 0-1.266 1.266c0 .696.57 1.265 1.266 1.265zm6.075-4.683v-1.265h-.19c-1.709 0-2.531 1.139-2.531 2.404v4.683h1.392v-2.025c0-.696.506-1.139 1.265-1.202v-1.329c-.57 0-1.012.19-1.265.506v-.506c0-.886.57-1.266 1.329-1.266zm2.974 5.949c-1.456 0-2.658-1.14-2.658-2.595 0-1.392 1.202-2.594 2.658-2.594 1.455 0 2.658 1.139 2.658 2.594 0 1.456-1.203 2.595-2.658 2.595zm0-1.266a1.27 1.27 0 0 0 1.266-1.265c0-.76-.57-1.266-1.266-1.266a1.27 1.27 0 0 0-1.266 1.266c0 .696.57 1.265 1.266 1.265zm4.746-3.227v-.57H21.26v4.936h1.392v-2.215c0-.822.507-1.265 1.33-1.265v-1.456c-.697-.063-1.14.127-1.393.57zm3.48 1.835v-1.202c.317.316.76.506 1.266.506v-1.329c-.76 0-1.265-.506-1.265-1.202v-.76h-1.393v4.05c0 1.33.823 2.405 2.532 2.405h.19v-1.266c-.76.064-1.33-.316-1.33-1.202zm2.975 2.595c.506 0 .949-.443.949-.95a.973.973 0 0 0-.95-.949.973.973 0 0 0-.948.95c0 .506.443.949.949.949zM13.223 16.295c.443.442.443 1.139 0 1.518l-.063.064a1.116 1.116 0 0 1-1.582.126l-2.405-2.405c-.696-.696-.759-1.518-.316-1.961l.063-.064c.38-.38.95-.38 1.33-.063.19.127.442.127.632-.063s.127-.443-.063-.633c-.76-.57-1.835-.506-2.468.19l-.064.063c-.759.823-.632 2.152.38 3.164l2.278 2.342c.76.759 2.025.759 2.785-.064l.063-.063c.76-.76.76-2.025-.063-2.784-.19-.19-.443-.19-.633 0-.063.19-.063.506.126.633zM11.768 3.259l.95 8.163c0 .253.252.38.505.38.254 0 .38-.254.38-.507L12.591 3.07v-.064c-.19-.57.253-1.328.822-1.455.317-.063.633 0 .886.19s.443.443.506.76l1.71 7.403c.062.253.315.38.505.317.253-.064.38-.317.317-.507L15.69 2.31A2.376 2.376 0 0 0 14.805.98a1.975 1.975 0 0 0-1.582-.316c-1.075.253-1.771 1.456-1.455 2.595z"/>
+                  <path d="M20.88 12.877l1.962-9.808c.253-1.076-.38-2.089-1.455-2.405-1.14-.316-2.342.38-2.658 1.519L16.577 9.65c-.063.253.064.443.317.57.253.126.443-.064.57-.317l2.15-7.467c.19-.696.887-1.14 1.583-.95.57.19.95.76.823 1.393l-2.025 9.809c-.064.253.126.442.316.506.316.063.506-.064.57-.317zM15.945 22.306c-3.101 0-5.696-2.278-5.696-5.505a.433.433 0 0 0-.443-.443.433.433 0 0 0-.443.443c0 3.733 3.038 6.391 6.582 6.391.253 0 .442-.19.442-.443a.433.433 0 0 0-.442-.443zM14.363 14.713c-.064.253-.19.442-.443.632l-.064.064c-.506.316-1.202.19-1.518-.317l-1.899-2.847c-.506-.823-.443-1.646.063-1.962l.064-.127c.632-.38 1.202-.063 1.772.76l1.582 2.404c.126.19.38.253.632.127.19-.127.253-.38.127-.633l-1.582-2.405c-.76-1.139-1.772-1.645-2.911-.949l-.19.063c-.95.633-1.076 2.025-.316 3.165l1.898 2.847c.633.886 1.835 1.14 2.721.506l.127-.063c.38-.253.633-.633.76-1.076.062-.253-.064-.443-.317-.506-.19-.063-.443.063-.506.316z"/>
+                  <path d="M17.273 16.105c-.886.506-1.455 1.455-1.518 2.91 0 .254.19.444.443.444s.443-.19.443-.443c.063-1.33.57-2.025 1.392-2.342.443-.19.949-.19 1.329-.126h.126c.57.126.76-.76.19-.886l-3.354-.76c-1.582-.443-1.835-1.012-1.519-1.961.127-.443.38-.633.76-.696.253-.064.57-.064.822 0 .064 0 .127 0 .19.063l5.126 1.202c.063 0 .063 0 .127.063.063.064.19.127.253.19.316.38.506 1.076.443 2.215-.317 3.987-2.152 6.455-6.581 6.392a.433.433 0 0 0-.443.442c0 .254.19.443.443.443 4.935.064 7.087-2.847 7.467-7.214.126-1.329-.127-2.278-.696-2.847-.38-.38-.696-.507-.95-.507l-5.062-1.202c-.063 0-.127 0-.253-.063a3.44 3.44 0 0 0-1.14 0c-.695.126-1.202.57-1.391 1.329-.443 1.392 0 2.531 2.151 3.1l1.202.254z"/>
+              </g>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
-  <body>
+
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.mask.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/datepicker.min.js"></script>
+    <script type="text/javascript" src="js/select2.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
