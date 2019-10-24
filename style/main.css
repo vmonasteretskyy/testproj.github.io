@@ -80,8 +80,11 @@ img {
 }
 input[type="text"] {
   font-size: 14px;
+  border: none;
 }
-
+.red_btn {
+  border: none;
+}
 /* banner top  start  */
 .banner__top {
   color: var(--white);
@@ -142,9 +145,7 @@ header .container,
 .event__img__part:hover img {
   transform: scale(1.1);
 }
-.header__lang:hover span::after,
-.date_drop:hover,
-.header__dropdown:hover .select2-selection__arrow b {
+.header__lang:hover span::after {
   background-image: url("../img/red_ar.svg") !important;
   cursor: pointer;
 }
@@ -189,10 +190,10 @@ header .container,
   font-size: 13px;
   display: none;
 }
-.actual_search__right input:invalid + div {
+/* .actual_search__right input:invalid + div {
   display: block;
-}
-.actual_search__right input:valid {
+} */
+.valid {
   background-image: url("../img/veri.svg");
   background-repeat: no-repeat;
   background-position: 95% center;
@@ -258,7 +259,8 @@ header .container,
   height: 100%;
   border: none;
 }
-.header__search button {
+.header__search button,
+.city_check_btn {
   width: 17px;
   height: 17px;
   background-image: url("../img/search.svg");
@@ -315,16 +317,19 @@ header .container,
 .header__check {
   width: 67.6%;
 }
-.header__check label {
+.header__check label,
+.check_block label {
   position: relative;
   color: #5b5b5b;
   cursor: pointer;
 }
-.header__check input[type="checkbox"] {
+.header__check input[type="checkbox"],
+.check_block input[type="checkbox"] {
   opacity: 0;
   cursor: pointer;
 }
-.header__check label::before {
+.header__check label::before,
+.check_block label::before {
   position: absolute;
   content: "";
   display: inline-block;
@@ -338,7 +343,8 @@ header .container,
 .header__check > div {
   cursor: pointer;
 }
-.header__check label::after {
+.header__check label::after,
+.check_block label::after {
   cursor: pointer;
   position: absolute;
   content: "";
@@ -351,14 +357,17 @@ header .container,
   top: 4px;
   transform: rotate(-45deg);
 }
-.header__check input[type="checkbox"] + label::after {
+.header__check input[type="checkbox"] + label::after,
+.check_block input[type="checkbox"] + label::after {
   content: none;
 }
-.header__check input[type="checkbox"]:checked + label::before {
+.header__check input[type="checkbox"]:checked + label::before,
+.check_block input[type="checkbox"]:checked + label::before {
   background-color: #f43c3c;
   border: solid 1px #f43c3c;
 }
-.header__check input[type="checkbox"]:checked + label::after {
+.header__check input[type="checkbox"]:checked + label::after,
+.check_block input[type="checkbox"]:checked + label::after {
   content: "";
 }
 /* check box end */
@@ -434,61 +443,27 @@ header .container,
 .fixed__filter .header__dropdown {
   width: 105px;
 }
-
+.mob_filter {
+  position: relative;
+}
 /* dropdown start */
 
 .header__dropdown {
   position: relative;
-  overflow: hidden;
-  padding-left: 20px;
-}
-
-.header__dropdown select {
-  background-color: transparent;
   cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  padding-left: 26px;
-  color: #919394;
-  height: 20px;
-  width: 100%;
-  padding-right: 20px;
+}
+.header__dropdown > div:first-child {
+  align-items: center;
+  display: flex;
 }
 
-.header__dropdown > img {
-  position: absolute;
-  left: 0;
-  top: 4px;
+.header__dropdown span {
+  margin-left: 10px;
+  margin-right: 7px;
 }
-.date_drop {
-  width: 105px;
-  display: flex;
-  align-items: center;
-  padding-left: 30px;
-  padding-right: 10px;
-  background: url("../img/drop.svg") no-repeat 100%;
-}
-.date_drop input {
-  width: 100%;
-  background-color: transparent;
-  border: none;
-  font-size: 12px;
-}
-.select2-container--default .select2-selection--single .select2-selection__arrow b {
-  background: url("../img/drop.svg") no-repeat 95%;
-  background-color: transparent;
-  width: 8px;
-  height: 5px;
-  border: none;
-}
-.select2-container--default .select2-selection--single {
-  background-color: transparent;
-  border: none;
-}
+
 .header__selects {
-  width: 23%;
+  width: 19%;
 }
 /* dropdown end */
 .menu__icon {
@@ -1300,7 +1275,7 @@ footer {
 .header_filter {
   position: relative;
 }
-.header__check:not(.more__checks) div:nth-child(n + 8) {
+.header__check:not(.more__checks) > div:nth-child(n + 9) {
   display: none;
 }
 .header__fixed,
@@ -1349,6 +1324,65 @@ footer {
 .fixed__filter_btn span {
   margin-right: 6px;
 }
+.city_check_wrap {
+  padding: 0 30px 30px 30px;
+  width: 290px;
+  box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  position: absolute;
+  top: 42px;
+  left: 0px;
+  z-index: 101;
+  display: none;
+}
+.city_input_wrap::after {
+  width: 290px;
+  height: 1px;
+  box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.2);
+  background-color: #f1f2f6;
+  position: absolute;
+  bottom: 0;
+  left: -30px;
+  content: "";
+}
+.city_input_wrap {
+  position: relative;
+}
+.city_input_wrap input {
+  width: 100%;
+  height: 50px;
+  padding-right: 20px;
+}
+.city_check_btn {
+  position: absolute;
+  top: 17px;
+  right: 0px;
+}
+.city_check {
+  padding-top: 30px;
+  max-height: 315px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
+.check_block > div {
+  margin-bottom: 18px;
+}
+.check_block input {
+  margin-right: 8px;
+}
+.check_block label {
+  color: #000;
+}
+.upArow path {
+  fill: #f43c3c;
+}
+.upArow svg:last-child {
+  transform: scale(1, -1);
+}
+.upArow {
+  color: #f43c3c;
+}
+
 @media (max-width: 1499.9px) {
   .big__banner {
     background-position-x: center;
@@ -1374,7 +1408,10 @@ footer {
     margin-bottom: 30px;
   }
   .small_event .event__img__part {
-    height: 310px;
+    height: 342px;
+  }
+  .full__size_banner .event__img__part {
+    height: 500px;
   }
 }
 @media (max-width: 1199.9px) and (min-width: 992px) {
@@ -1514,10 +1551,10 @@ footer {
   .copy_rights {
     max-width: 270px;
   }
-  .header__check:not(.more__checks) div:nth-child(n + 6) {
+  .header__check:not(.more__checks) > div:nth-child(n + 7) {
     display: none;
   }
-  .more__checks div:nth-child(n + 2) {
+  .more__checks > div:nth-child(n + 2) {
     display: block;
   }
 }
@@ -1567,7 +1604,7 @@ footer {
   .header__login span {
     display: none;
   }
-  .header__check:not(.more__checks) div:nth-child(n + 5) {
+  .header__check:not(.more__checks) > div:nth-child(n + 6) {
     display: none;
   }
   .more__checks div:nth-child(n) {
@@ -1708,6 +1745,9 @@ footer {
   }
 }
 @media (max-width: 767.9px) {
+  .city_check_wrap {
+    display: none !important;
+  }
   .desk_filter_btn {
     display: none !important;
   }

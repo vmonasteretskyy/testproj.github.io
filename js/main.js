@@ -152,7 +152,7 @@ if ($(window).width() < 576) {
   });
 }
 
-$(".header__check").click(function() {
+$(".header__check > div >input").click(function() {
   if ($(".header__check input[type=checkbox]").is(":checked")) {
     $(".filter_btn").css("display", "flex");
   } else {
@@ -160,4 +160,21 @@ $(".header__check").click(function() {
   }
 });
 
-$(".datepicker-here").datepicker({position: "tr"});
+function ValidateEmail(inputText, e) {
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (inputText.value.match(mailformat)) {
+    $(".invalid").css("display", "none");
+    $(".actual_search__right input").addClass("valid");
+    document.form1.text1.focus();
+    return true;
+  } else {
+    e.preventDefault();
+    $(".invalid").css("display", "block");
+    document.form1.text1.focus();
+    return false;
+  }
+}
+$(".city_drop > div:not(.city_check_wrap)").click(function() {
+  $(".city_check_wrap").slideToggle(500);
+  $(this).toggleClass("upArow");
+});
