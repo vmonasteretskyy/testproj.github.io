@@ -78,14 +78,13 @@ $(".big__slider").slick({
 
 $(".all_text").click(function() {
   $(".about_us__home__text").toggleClass("more_text");
+  $(".all_text span:first-child").toggleClass("less__text");
+  $(".all_text span:last-child").toggleClass("show_txt");
 });
 
 $(".more__content").click(function() {
-  $(".more__events")
-    .slideToggle(500)
-    .hide()
-    .css("display", "flex");
-  $(this).toggleClass("less__text");
+  $(".more__events").slideDown(500);
+  $(this).css("display", "none");
 });
 
 $(document).ready(function() {
@@ -143,7 +142,6 @@ $(".mobile__lang span").click(function() {
 
 if ($(window).width() < 576) {
   $("footer").click(function(e) {
-    console.log();
     if ($(e.target).hasClass("footer__title")) {
       $(e.target)
         .next("div.footer__lists")
@@ -153,3 +151,13 @@ if ($(window).width() < 576) {
     }
   });
 }
+
+$(".header__check").click(function() {
+  if ($(".header__check input[type=checkbox]").is(":checked")) {
+    $(".filter_btn").css("display", "flex");
+  } else {
+    $(".filter_btn").css("display", "none");
+  }
+});
+
+$(".datepicker-here").datepicker({position: "tr"});
