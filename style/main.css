@@ -185,7 +185,7 @@ header .container,
 .invalid {
   position: absolute;
   bottom: 15px;
-  left: 250px;
+  right: 50px;
   max-width: 128px;
   color: #f43c3c;
   font-size: 13px;
@@ -1193,8 +1193,15 @@ footer {
 .footer__title img {
   display: none;
 }
-/* footer end  */
 
+.actual_search__right form > div {
+  display: flex;
+  width: calc(100% - 260px);
+  position: relative;
+}
+.actual_search__right form input {
+  width: 100%;
+}
 @media (max-width: 1499.9px) {
   .big__banner {
     background-position-x: center;
@@ -1271,9 +1278,6 @@ footer {
   }
 }
 @media (max-width: 1199.9px) {
-  .invalid {
-    left: 50%;
-  }
   .banner__date p:first-child {
     font-size: 35px;
     line-height: 35px;
@@ -1371,9 +1375,6 @@ footer {
   }
 }
 @media (max-width: 991.9px) {
-  .invalid {
-    left: 40%;
-  }
   .copy_rights {
     max-width: 211px;
   }
@@ -1561,7 +1562,11 @@ footer {
 }
 @media (max-width: 767.9px) {
   .invalid {
-    left: 23%;
+    top: 0;
+    max-width: none;
+    left: 10px;
+    right: auto;
+    font-size: 12px;
   }
   .banner__top,
   .header__login,
@@ -1843,10 +1848,12 @@ footer {
   }
 }
 @media (max-width: 575.9px) {
+  .actual_search__right form > div {
+    width: 100%;
+  }
   .invalid {
-    left: auto;
-    right: 40px;
-    top: 10px;
+    left: 10px;
+    top: 0px;
     bottom: auto;
   }
   .mobile__menu {
