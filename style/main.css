@@ -1544,7 +1544,9 @@ footer {
 #datepicker2 {
   display: none;
 }
-
+.calendar_bottom a:hover {
+  color: #f43c3c;
+}
 @media (max-width: 1499.9px) {
   .big__banner {
     background-position-x: center;
@@ -2176,7 +2178,7 @@ header.lightpick__month-title-bar::after {
     background-size: cover;
   }
   .small_event .event__img__part {
-    height: 313px;
+    height: auto;
   }
   h1 {
     font-size: 59px;
@@ -2368,6 +2370,7 @@ header.lightpick__month-title-bar::after {
     width: 100%;
     margin-top: 20px;
     text-align: center;
+    justify-content: center;
   }
   .made_by {
     max-width: none;
@@ -2404,6 +2407,9 @@ header.lightpick__month-title-bar::after {
   }
   .events_part img {
     display: block;
+  }
+  .header__check.just_btwn > .more.mobile__more {
+    display: none !important;
   }
 }
 @media (max-width: 575.9px) {
