@@ -168,10 +168,14 @@ function ValidateEmail(inputText, e) {
 $(".city_drop1 > div:not(.city_check_wrap)").click(function() {
   $(".city_check_wrap1").slideToggle(500);
   $(this).toggleClass("upArow");
+  $(".calendar_wrap1").slideUp(500);
+  $(".date_drop1 > div:first-child").removeClass("upArow");
 });
 $(".city_drop2 > div:not(.city_check_wrap)").click(function() {
   $(".city_check_wrap2").slideToggle(500);
   $(this).toggleClass("upArow");
+  $(".calendar_wrap2").slideUp(500);
+  $(".date_drop2 > div:first-child").removeClass("upArow");
 });
 
 $(".header__search .first_form input").focus(function() {
@@ -272,6 +276,8 @@ new Lightpick({
 $(".date_drop1 > div:first-child").click(function() {
   $(".calendar_wrap1").slideToggle(500);
   $(this).toggleClass("upArow");
+  $(".city_check_wrap1").slideUp(500);
+  $(".city_drop1 > div:not(.city_check_wrap").removeClass("upArow");
 });
 $(".calendar_wrap1 .red_btn").click(function() {
   $(".calendar_wrap1").slideUp(500);
@@ -280,6 +286,8 @@ $(".calendar_wrap1 .red_btn").click(function() {
 $(".date_drop2 > div:first-child").click(function() {
   $(".calendar_wrap2").slideToggle(500);
   $(this).toggleClass("upArow");
+  $(".city_check_wrap2").slideUp(500);
+  $(".city_drop2 > div:not(.city_check_wrap").removeClass("upArow");
 });
 $(".calendar_wrap2 .red_btn").click(function() {
   $(".calendar_wrap2").slideUp(500);

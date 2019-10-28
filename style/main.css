@@ -1572,7 +1572,7 @@ footer {
     margin-bottom: 20px;
   }
   .small_event .event__img__part {
-    height: 342px;
+    height: auto;
   }
   .full__size_banner .event__img__part {
     height: 500px;
